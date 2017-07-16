@@ -27,16 +27,16 @@ void start(){
   delay(2000);
   //a = distancia();
   //a = 36.0; //adaptado ao do agostinho
-  a = 16.0;
+  
   //gira_motor();
   Serial.print("Lendo b");
   delay(2000);
   //b = distancia();
   //b = 24.5; //adaptado ao do agostinho;
-  b = 0.0;
+  
   delay(1000);
   //maximo = teste(); //para uso no trabalho
-  maximo = 7238.02; //facilitando as coisas
+  maximo = 22050.00; //facilitando as coisas / em ml
 }
 void gira_motor(){
 	
@@ -96,7 +96,7 @@ void setup(){
 void loop(){
     
     Serial.print("\nVolume(L): ");
-	  volume = maximo - teste();
+    volume = maximo - teste();
     float show = volume/1000.0;
     Serial.print(show);
     alarme();
